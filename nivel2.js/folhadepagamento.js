@@ -1,5 +1,20 @@
-let horastrabalhadas = prompt("Quantas horas mensais você trabalha? ");
-let valorhora = prompt("Qual o valor recebido por hora?");
+let horas = Number(prompt('Digite as horas trabalhadas:'));
+let valorHora = Number(prompt('Digite o valor da hora:'));
 
-let salariobruto = (horastrabalhadas * valorhora);
-console.log ("Seu salário bruto é R$" + salariobruto);
+let salarioBruto = horas * valorHora;
+
+let inss = salarioBruto * 0.08;
+let valeTransporte = salarioBruto * 0.06;
+let imposto = salarioBruto * 0.075;
+
+let salarioLiquido = salarioBruto - inss - valeTransporte - imposto;
+
+alert('Salário bruto: ' + salarioBruto);
+
+alert('Valor do INSS: ' + inss);
+
+alert('Valor do Vale Transporte: ' + valeTransporte);
+
+alert('Valor do Imposto de Renda: ' + imposto);
+
+alert('Salário líquido: ' + salarioLiquido);
